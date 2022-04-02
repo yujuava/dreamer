@@ -1,7 +1,7 @@
 :root{
    --color_text:#ffffffCC;
    --font-family_text:'Yuji Mai', serif;
-   --font-size_22:20px;
+   --font-size_22:18px;
    --border-top_gray:3px solid  #c5c8ca;
    --border-left_gray:3px solid  #c5c8ca;
    --border-right_gray:3px solid  #858788;
@@ -10,11 +10,11 @@
 }
 .forum_dreamer{
     background-image: url(../pic/bcg3.jpg);
-    padding: 1% 0 0 0;
+    padding: 0.4% 0 0 0;
 }
 .product_overview{
     background-image: url(../pic/bcg3.jpg);
-    padding: 1% 0 0 0;
+    padding: 0.4% 0 0 0;
 }
 h1{
     display: none;
@@ -71,6 +71,7 @@ body{
 .nav_background{
     z-index: 6;
     position: fixed;
+    top: -10px;
 }
 .top_color{
     position: absolute;
@@ -111,11 +112,17 @@ header>video{
     display: inline-block;
     text-decoration: none;
 }
+.main_manu a:hover{
+    color: #2671BD;
+}
 .login i{
     color: rgb(255, 255, 255,0.01);
     -webkit-text-stroke: 1.5px hsla(0,0%,100%,.8);
     font-size: 18px;
     margin: 10px;
+}
+.login i:hover{
+    -webkit-text-stroke:1.5px #2671BD;
 }
 /* =========<footer>========== */
 footer{
@@ -195,12 +202,50 @@ footer >img{
     margin: auto;;
     border-radius:100% 100% 100% 100% / 100% 100% 0% 100% 
 }
-.hot_comment a{
+.artical a{
     text-decoration: none;
+    position: relative;
 }
+.artical a:hover{
+    color:#7eb8f1;
+}
+.artical a::before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right,#fff 5%,rgb(0, 0, 0) 100%);
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    animation: go2 3.5s infinite cubic-bezier(0.57, 0.35, 0.45, 0.69);
+}
+.hot_artical::after,.my_artical::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(to left,#fff 5%,rgb(0, 0, 0) 100%);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    animation: go 3.5s infinite alternate cubic-bezier(0.57, 0.35, 0.45, 0.69);
+}
+.tatal_artical::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(to left,#fff 10%,rgb(133, 133, 133) 100%);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    animation: go 5s infinite alternate cubic-bezier(0.57, 0.35, 0.45, 0.69);
+}
+
+@keyframes go{100%{width: 100%;};}
+@keyframes go2{100%{width: 100%;};}
 .hot_comment p{
     line-height: 25px;
 }
+
 /* ==============<<ad>>==================== */
 .ad{
     position: relative;
@@ -245,6 +290,10 @@ footer >img{
     /* background-color: #f03a3a; */
     margin: 30px;
 }
+.comment_detail:hover{
+    box-shadow: 0 0 20px 10px #313131b2,0 0 20px 10px inset #424242b2;
+    border-radius: 24px;
+}
 .comment_detail_talk{
     flex-grow: 1;
     width: 40%;
@@ -278,6 +327,34 @@ footer >img{
 }
 
 /* =============<<hot_item>>================ */
+.hot_gamesh2{
+    position: relative;
+    width: 10%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+.hot_gamesh2::before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left,rgb(116, 116, 116) 10%,rgb(0, 0, 0) 100%);
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    animation: h2go 5s infinite cubic-bezier(0.57, 0.35, 0.45, 0.69);
+}
+.hot_gamesh2::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(to right,rgb(128, 128, 128) 10%,rgb(58, 58, 58) 100%);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    animation: h2go2 5s infinite alternate cubic-bezier(0.57, 0.35, 0.45, 0.69);
+}
+@keyframes h2go{100%{width: 100%;};}
+@keyframes h2go2{100%{width: 100%;};}
 .hot_games{
     padding-top: 50px;
     background-color: #014820;
@@ -357,6 +434,13 @@ footer >img{
     border-radius: 24px;
     flex-wrap: wrap;
 }
+.Classification:hover,.how_many:hover{
+    background-color: #3f91e433;
+}
+.Classification:hover a,.how_many:hover a{
+    color: #82bbf3;
+}
+
 .product_card{
     display: inline-block;
     width: 99%;
@@ -389,6 +473,9 @@ footer >img{
 .product_card li:nth-child(3n){
     margin-top: -100px;
 }
-
+.item_detail_card:hover{
+    box-shadow: 0 0 10px 10px #a1aa4f33, 0 0 10px 10px inset #a1aa4f33;
+    border-radius: 24px;
+}
 
 

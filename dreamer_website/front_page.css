@@ -301,6 +301,7 @@ h3{
     position: absolute;
     right: 10%;
     bottom: 8.5%;
+    z-index: 99;
 }
 /* =============<latest_information>============= */
 .latest_information h2{
@@ -347,9 +348,10 @@ h3{
     padding-bottom: 30px;
 }
 .hall:hover,.under_water:hover,.eyewitess:hover{
-    box-shadow: 5px 5px 25px 20px  rgba(87, 86, 86, 0.6),5px 5px 50px 100px inset rgb(87, 86, 86,0.8);
+    box-shadow: 0px 0px 25px 20px  rgba(0, 0, 0, 0.6),0px 0px 50px 100px inset rgba(10, 10, 10, 0.6);
     /* box-shadow: 5px 5px 25px 20px inset rgb(255, 255, 255,0.5); */
     border-radius: 24px;
+    /* border: 1px dashed #858788; */
 }
 .under_water{
     padding-top: 50px;
