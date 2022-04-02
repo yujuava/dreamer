@@ -276,6 +276,7 @@ footer >img{
     left: 0;
     box-shadow:0 0 50px 30px #000000 inset;
 }
+
 /* =============<<hot_item>>================ */
 .hot_games{
     padding-top: 50px;
@@ -388,5 +389,6 @@ footer >img{
 .product_card li:nth-child(3n){
     margin-top: -100px;
 }
+
 
 

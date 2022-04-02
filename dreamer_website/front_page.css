@@ -2,6 +2,12 @@
 p{
     color: var(--color_text);
 }
+button:hover{
+    box-shadow: 0px 0px 7px 3px #c5c8ca;
+}
+.encyclopedia i:hover{
+    color: #2671BD;
+}
 :root{
    --color_text:#ffffffCC;
    --font-family_text:'Yuji Mai', serif;
@@ -43,7 +49,7 @@ h2{
 .content{
     width: 72%;
     margin: auto;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
 }
 /* =================<header>================= */
 body{
@@ -100,11 +106,17 @@ header>video{
     display: inline-block;
     text-decoration: none;
 }
+.main_manu a:hover{
+    color: #2671BD;
+}
 .login i{
     color: rgb(255, 255, 255,0.01);
     -webkit-text-stroke: 1.5px hsla(0,0%,100%,.8);
     font-size: 18px;
     margin: 10px;
+}
+.login i:hover{
+    -webkit-text-stroke:1.5px #2671BD;
 }
 /* =================<latest_movie>================= */
 .latest_movie{
@@ -214,6 +226,7 @@ button{
     display: block;
 }
 .explain{
+    position: relative;
     margin: auto;
     width: 90%;
     color: var(--color_text);
@@ -222,9 +235,45 @@ button{
     border-bottom: var(--border-bottom_gray);
     border-left:var(--border-left_gray) ;
     border-radius: 30px; 
+    z-index: 3;
+    overflow: hidden;
     /* border-color: linear-gradient(to bottom, #10181F, #032D57);
     background-color: #2671BD; */
 }
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.explain::before{
+    content: '';
+	position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    /* background-repeat: no-repeat; */
+    background-image: conic-gradient(#ffffff, #000000, #000000,#ffffff);
+    animation: rotate 13s linear infinite;
+}
+.explain::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 3px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
 .explain p{
     padding: 0 30px 0 30px;
     margin: 10px;
@@ -234,6 +283,7 @@ button{
     display: block;
     font-size: 20px;
     font-weight: 700;
+    z-index: 99;
 }
 h3{
     font-family:'Abhaya Libre', serif;
@@ -294,6 +344,7 @@ h3{
     flex-direction: column;
     justify-content: space-between;
     margin: auto;
+    padding-bottom: 30px;
 }
 .hall:hover,.under_water:hover,.eyewitess:hover{
     box-shadow: 5px 5px 25px 20px  rgba(87, 86, 86, 0.6),5px 5px 50px 100px inset rgb(87, 86, 86,0.8);
@@ -340,7 +391,7 @@ h3{
     text-shadow: 0.2em -0.2em 0.2em black;
     position: absolute;
     right: 5%;
-    bottom: -20%;
+    bottom: -10%;
     filter: drop-shadow(5px -8px 6px rgba(0, 0, 0, 0.5));
 }
 /* ===========<latest_popular_ranking>=========== */
@@ -358,6 +409,7 @@ h3{
     top: -0.3%;
     z-index: -100;
     transform: rotate(0.2deg);
+    
 }
 .ranking_star_area{
     display: flex;
@@ -377,7 +429,8 @@ h3{
     right: -10%;
     width: 110%;
     height: 70%;
-    transform: rotate(1deg);
+    transform: rotate(-3deg);
+    z-index: -1;
 }
 .ranking_area img{
     display: inline-block;
@@ -385,10 +438,15 @@ h3{
     width: 10rem;
     height: 10rem;
 }
+.rank_pic:hover{
+    box-shadow: 0 0 20px 10px #e8e9e980;
+}   
 .p1{
     /* width: 15rem;
     height: 15rem; */
     margin-top: 4rem;
+    /* position: absolute; */
+    width: 300px;
 }
 .p2{
     margin-left: 20rem;
@@ -421,7 +479,7 @@ h3{
     border: 3px solid #2671BD;
     background:linear-gradient(to bottom, #10181F, #032D57);
     font-family:'Abhaya Libre', serif;
-    font-size: 20px;
+    font-size: 16px;
     text-shadow: 0.2em -0.2em 0.2em black;
     position: absolute;
     right: 5%;
@@ -443,6 +501,9 @@ h3{
     line-height: 60px;
     margin: 2.5rem;
     /* position: absolute; */
+}
+.rank:hover{
+    box-shadow: 0 0 20px 10px #c5c8ca80 ;
 }
 .t2 ,.t6{
     margin-left: 5rem;
@@ -500,76 +561,3 @@ footer >img{
     text-align: center;
 }
 /* =============<<forum>>================ */
-.category{
-    display: flex;
-    width: 40%;
-    justify-content: space-around;
-}
-.category li a{
-    text-decoration: none;
-    color: var(--color_text);
-}
-.hot_comment{
-    display: flex;
-}
-.hot_comment li{
-    background-image:url(../pic/AVALON.png);
-    border: 1px solid #ffffffB2;
-    margin: 15px;
-    border-radius: 16% 15% 48% 49% / 50% 52% 47% 51% ;
-}
-.hot_comment img{
-    width: 50%;
-    display: block;
-    margin: auto;;
-    border-radius:100% 100% 100% 100% / 100% 100% 0% 100% 
-}
-.hot_comment a{
-    text-decoration: none;
-}
-.hot_comment p{
-    line-height: 25px;
-}
-/* ==============<<ad>>==================== */
-.ad{
-    width: 100%;
-}
-.comment{
-    width: 72%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.artical{
-    padding: 50px;
-}
-.artical li{
-    padding: 20px;
-}
-.artical a{
-    text-decoration: none;
-    color: var(--color_text);
-}
-.human_comment{
-    width: 70%;
-}
-.human_comment img{
-    width: 20%;
-    border-radius: 100% ;
-    display: inline-block;
-    /* position: absolute; */
-}
-.comment_detail{
-    display: flex;
-    justify-content: space-around;
-    background-color: #032D57;
-    margin: 15px;
-}
-.comment_detail_talk{
-    flex-grow: 1;
-    width: 40%;
-    padding: 10px;
-    /* border: 1px solid rgb(255, 255, 255); */
-    /* border-radius: 10% / 50%; */
-}
-
