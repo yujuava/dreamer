@@ -12,7 +12,7 @@
     background-image: url(../pic/bcg3.jpg);
     padding: 0.4% 0 0 0;
 }
-.product_overview{
+.product_overview,.online_reservation{
     background-image: url(../pic/bcg3.jpg);
     padding: 0.4% 0 0 0;
 }
@@ -56,6 +56,9 @@ p{
     padding-top: 100px;
     width: 72%;
     margin: auto;
+}
+label{
+    color:#ffffffCC;
 }
 /* =================<header>================= */
 body{
@@ -289,6 +292,7 @@ footer >img{
     justify-content: space-around;
     /* background-color: #f03a3a; */
     margin: 30px;
+    transition: ease 0.7s;
 }
 .comment_detail:hover{
     box-shadow: 0 0 20px 10px #313131b2,0 0 20px 10px inset #424242b2;
@@ -400,7 +404,7 @@ footer >img{
     padding:35px 0 20px 0;
     border-radius: 3% 3% 28% 32% / 29% 31% 23% 33%;
     z-index: -1;
-    transition: ease-in-out 0s -1s;
+    transition: ease-in-out 0s 0s;
 }
 .item_games img{
     border-radius: 22% 32% 28% 32% / 29% 31% 23% 33%
@@ -410,6 +414,7 @@ footer >img{
     margin: auto;
     display: block;
     box-shadow: 3px 3px 10px 0.5px #000;
+    transition: ease 5s;
 }
 .item_games:hover.item_games::after{
     z-index: 1;
@@ -433,6 +438,9 @@ footer >img{
     width: 99%;    
     border-radius: 24px;
     flex-wrap: wrap;
+}
+.Classification,.how_many{
+    transition: ease 0.8s;
 }
 .Classification:hover,.how_many:hover{
     background-color: #3f91e433;
@@ -473,9 +481,63 @@ footer >img{
 .product_card li:nth-child(3n){
     margin-top: -100px;
 }
+.item_detail_card{
+    transition: ease 0.7s;
+    padding: 15px;
+}
 .item_detail_card:hover{
-    box-shadow: 0 0 10px 10px #a1aa4f33, 0 0 10px 10px inset #a1aa4f33;
+    box-shadow: 0 0 10px 10px #0a0a09, 0 0 10px 150px inset #60615933;
     border-radius: 24px;
 }
+/* ===========<<online_reservation>>============= */
+.where_store{
+    display: flex;
+    align-items: center;
+}
+.taiwan{
+    display: inline-block;
+    margin: 50px;
+    border-radius: 54px;
+    box-shadow: 0 0 10px 20px rgb(0, 0, 0);
+}
+iframe{
+    border-radius: 24px;
+}
+.map{
+    width: 50%;
+    overflow: hidden;
+}
+.online_reserve{
+   color:#ffffffCC;
+   line-height: 25px;
+   padding-left: 20px;
+   margin: auto
+}
+.store input{
+    color: aqua;
+}
+.store,.others_detail{
+    width: 60%;
+    margin: auto;
+}
+.others_detail input{
+    margin: 10px;
+}
+.others_detail input{
+    background-color: #2671BD33;
+    border-radius: 24px;
+    height: 25px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    width: 150px;
+}
+.others_detail input:last-child{
+    background-color: #4e5c1288;
+    width: 100px;
 
-
+}
+.notice{
+    margin: auto;
+    padding-left: 40px;
+}

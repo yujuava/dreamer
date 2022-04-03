@@ -7,7 +7,7 @@
     <title>DREAMER_online reservation</title>
     <link rel="icon" href="../pic/logo3.icon.png">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="front_page.css">
+    <link rel="stylesheet" href="./inner_page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,42 +15,105 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@600&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="inner.js">
 </head>
-<body>
-    <header>
+<body class="online_reservation">
+    <header >
         <h1>桌遊_桌夢人_DREAMER</h1>
-        <img src="../pic/movie圖.png" alt="movie_img">
-        <img src="../pic/topcolor.png" alt="">
+        <img class="nav_background" width="100%"  src="../pic/nav_backgroundcolor.jpg" alt="movie_img">
         <nav class="navigation_bar">
             <div class="logo">
-                <img width="130px" hight="67px" src="../pic/LOGO_gray.png" alt="logo">
+                <a href="/front_page.html"><img width="130px" hight="67px" src="../pic/LOGO_gray.png" alt="logo">
+                </a>
             </div>
             <ul class="main_manu">
-                <li><a class="navpage" href="http://127.0.0.1:5500/%E5%80%8B%E5%B0%88/%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88/forum.html">情報專區</a></li>
-                <li><a class="navpage" href="http://127.0.0.1:5500/%E5%80%8B%E5%B0%88/%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88/product_overview.html">進入商品</a></li>
-                <li><a class="navpage" href="http://127.0.0.1:5500/%E5%80%8B%E5%B0%88/%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88/online_reservation.html">線上預約</a></li>
-                <li><a class="navpage" href="http://127.0.0.1:5500/%E5%80%8B%E5%B0%88/%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88/about.html">關於我們</a></li>
+                <li><a class="navpage" href="../dreamer_website/forum.html">情報專區</a></li>
+                <li><a class="navpage" href="../dreamer_website/product_overview.html">進入商品</a></li>
+                <li><a class="navpage" href="../dreamer_website/online_reservation.html">線上預約</a></li>
+                <li><a class="navpage" href="../dreamer_website/about.html">關於我們</a></li>
             </ul>
             <div class="login">
-                <a href="http://127.0.0.1:5500/%E5%80%8B%E5%B0%88/%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88/login.html"><i class="fa-solid fa-user"></i></a>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <a href="../dreamer_website/login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="../dreamer_website/login.html"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </nav>
     </header>
-    <img src="https://picsum.photos/300/200/?random=10">
-    <img src="https://picsum.photos/300/200/?random=10">
-    <p>預約店家：</p>
-    <p>訂位人姓名：</p>
-    <p>聯絡電話：</p>
-    <p>電子郵件信箱：</p>
-    <p>希望預訂日期/時間為</p>
-    <p>總人數：</p>
-    <p>驗證碼：</p>
-    <p>預約訂位須知：</p>
-    <p>1. 假日位置如遇客滿將保留１０分鐘，超過時間自動取消訂位不另行通知，請準時進場。</p>
-    <p>2. 攜帶外食將酌收每人５０元清潔費，生日蛋糕、水、嬰兒食品除外。</p>
-    <p>3. 資料送出後待門市確認訂位狀況，並電話回覆訂位成功後才算完成訂位哦！（營業時間２４Ｈ內回覆）</p>
-    <p>4. 如有其他問題、特殊情況可私訊聯繫粉專管理員。</p>
+    <section>
+        <div class="content">
+            <div class="where_store">
+                <img class="taiwan"src="/pic/taiwan.png">
+                <!-- <img src="https://picsum.photos/300/200/?random=10"> -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d57894.143048510006!2d121.22492542076255!3d24.918987205026003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stibame!5e0!3m2!1szh-TW!2stw!4v1648973700872!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="online_reserve">
+                <div class="store">
+                    <label>預約店家：</label>
+                    <input type="checkbox">桃園外國店
+                    <input type="checkbox">台中太陽店
+                    <input type="checkbox">台南古蹟店
+                    <input type="checkbox">高雄海洋店
+                    <input type="checkbox">台東海豚店<br>
+                </div>
+                <div class="others_detail">
+                    <label>訂位人姓名：</label>
+                    <input type="text"><br>
+                    <label>聯絡電話：</label>
+                    <input type="text"><br>
+                    <label>電子郵件信箱：</label>
+                    <input type="email"><br>
+                    <label>希望預訂日期/時間為</label>
+                    <input type="date"><br>
+                    <label>總人數：</label>
+                    <input type="number"><br>
+                    <input class="check_correct" type="button" value="確認送出">
+                </div>
+                <!-- <label>驗證碼：</label>
+                <input type="text">
+                <div id="verification_code"></div> -->
+            </div> 
+        </div>    
+    </section>  
+    <section>
+        <div class="content notice">
+            <p>預約訂位須知：</p>
+            <p>1. 假日位置如遇客滿將保留１０分鐘，超過時間自動取消訂位不另行通知，請準時進場。</p>
+            <p>2. 攜帶外食將酌收每人５０元清潔費，生日蛋糕、水、嬰兒食品除外。</p>
+            <p>3. 資料送出後待門市確認訂位狀況，並電話回覆訂位成功後才算完成訂位哦！（營業時間２４Ｈ內回覆）</p>
+            <p>4. 如有其他問題、特殊情況可私訊聯繫粉專管理員。</p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_detail">
+            <div class="logo">
+                <img src="../pic/LOGO_gray.png" alt="">
+            </div>
+            <div class="subtitle">
+                <h2>相關服務</h2>
+                <a href="javascript:;">熱門排行</a>
+                <a href="javascript:;">線上預約</a>
+                <a href="javascript:;">購物須知</a>
+                <a href="javascript:;">門市探索</a>
+            </div>
+            <div class="people_center">
+                <h2>情報專區</h2>
+                <a href="javascript:;">最新消息</a>
+                <a href="javascript:;">活動消息</a>
+                <a href="javascript:;">討論區</a>
+                <a href="javascript:;">二手交換</a>
+            </div>
+            <div class="contact_us">
+                <h2>會員中心</h2>
+                <a href="javascript:;">我的收藏</a>
+                <a href="javascript:;">我的最愛</a>
+                <a href="javascript:;">購物車</a>
+                <a href="javascript:;">訂購紀錄</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>使用條款｜隱私權保護政策｜ @ tibame</p>
+            <p>本平台僅供學習、展示之用。 若有侵權疑慮，您可以私訊緯育TibaMe，後續會由專人協助處理。</p>
+        </div>
+        <img src="../pic/footer_backgroundcolor.jpg" alt="">
+    </footer>
 </body>
 </html>
