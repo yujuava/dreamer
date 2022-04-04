@@ -656,21 +656,21 @@ iframe{
 /* =================<<login>>==================== */
 .login_background{
     position: absolute;
-    top: 4%;
-    left: 26%;
+    top: -1%;
+    left: 26.5%;
     width: 50%;
     z-index: -1;
 }
 .login_background:nth-child(2){
     position: absolute;
-    top: 4%;
-    left: 26%;
+    top: -1%;
+    left: 25.5%;
     width: 50%;
     z-index: 1;
 }
 .login_page{
     width: 100%;
-    padding-top: 14%; 
+    padding-top: 11%; 
     z-index: 99;
 }
 .login_text{
@@ -679,6 +679,7 @@ iframe{
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
+    box-shadow: 5px 5px 10px 5px #00000033;
     padding-top: 5%;
 }
 .login_text h2{
