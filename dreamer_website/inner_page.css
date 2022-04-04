@@ -9,12 +9,19 @@
    --border_all:var(--border-top_gray) var(--border-right_gray) var(--border-bottom_gray) var(--border-left_gray);
 }
 .forum_dreamer{
-    background-image: url(../pic/bcg3.jpg);
-    padding: 0.4% 0 0 0;
+    background-image: url(../pic/bcg7.jpg);
+    padding: 0.1% 0 0 0;
 }
-.product_overview,.online_reservation{
+.loginin{
     background-image: url(../pic/bcg3.jpg);
-    padding: 0.4% 0 0 0;
+    padding: 0.1% 0 0 0;
+}
+.online_reservation,.product_overview{
+    background-image: url(../pic/bcg7.jpg);
+}
+.about{
+    padding: 0.1% 0 0 0;
+    background-color: black;
 }
 h1{
     display: none;
@@ -64,6 +71,9 @@ label{
 body{
     position: relative;
 }
+.logo{
+    padding-top: 8px;
+}
 .header{
     width: 100%;
     position: relative;
@@ -107,6 +117,23 @@ header>video{
     /* padding-left: 50px; */
     margin-left: 30%;
 }
+.navpage{
+    padding:  16px 0 16px 0;
+    /* background: linear-gradient(to bottom,rgb(0, 0, 0,0.6) 0%,#ffc00000 100%); */
+    position: relative;
+}
+.navpage::after{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 199;
+    /* background: linear-gradient(to bottom,rgba(25, 82, 156, 1) 0%,rgba(25, 82, 156, 0.6) 10%,#ffc00000 50%); */
+    transition: ease 1s;
+    opacity: 0;
+}
 .main_manu a{
     color:var(--color_text);
     font-family:var(--font-family_text);
@@ -114,15 +141,21 @@ header>video{
     margin: 0 15px 0 15px;
     display: inline-block;
     text-decoration: none;
+    transition: ease 0.2s;
 }
 .main_manu a:hover{
-    color: #2671BD;
+    color: #9ec9f7;
+}
+.main_manu a:hover.navpage::after{
+    opacity: 1;
+    background: linear-gradient(to bottom,rgb(30, 94, 179,0.9) 0%,rgba(25, 82, 156, 0.7) 10%,#ffc00000 50%);
 }
 .login i{
     color: rgb(255, 255, 255,0.01);
     -webkit-text-stroke: 1.5px hsla(0,0%,100%,.8);
     font-size: 18px;
     margin: 10px;
+    transition: ease 0.2s;
 }
 .login i:hover{
     -webkit-text-stroke:1.5px #2671BD;
@@ -139,14 +172,27 @@ footer >img{
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 300px;
     z-index: -100 ;
+}
+.information{
+    font-size: 22px;
+    font-family: var(--font-family_text);
+    font-weight: 500;
+    color: #ffffffBF;
+    text-align: center;  
+    padding-bottom: 10px;
+}
+footer a{
+    font-size: 16px;
 }
 .footer_detail{
     width: 80%;
     display: flex;
     justify-content: space-around;
     margin: auto;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
+    align-items: center;
 }
 .footer_detail .logo{
     width: 130px;
@@ -156,7 +202,7 @@ footer >img{
     font-family: var(--font-family_text);
     font-weight: 500;
 }
-.footer_detail div{
+.logo,.subtitle,.people_center,.contact_us{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -168,10 +214,19 @@ footer >img{
     color: var(--color_text);
     font-family: var(--font-family_text);
 }
+.online_web{
+    display: flex;
+    flex-direction: row;
+}
+.online_contact i{
+    margin: 10px;
+    font-size: 25px;
+}
 .copyright p{
     line-height: 20px;
     color: var(--color_text);
     text-align: center;
+    font-size: 12px;
 }
 /* =============<<forum>>================ */
 .category{
@@ -336,6 +391,7 @@ footer >img{
     width: 10%;
     margin: auto;
     margin-bottom: 25px;
+    z-index: -1;
 }
 .hot_gamesh2::before{
     content: '';
@@ -403,8 +459,9 @@ footer >img{
     line-height: 30px;
     padding:35px 0 20px 0;
     border-radius: 3% 3% 28% 32% / 29% 31% 23% 33%;
-    z-index: -1;
-    transition: ease-in-out 0s 0s;
+    opacity: 0;
+    /* transition: ease-in-out 0s 0s; */
+    transition: ease 0.7s;
 }
 .item_games img{
     border-radius: 22% 32% 28% 32% / 29% 31% 23% 33%
@@ -414,10 +471,10 @@ footer >img{
     margin: auto;
     display: block;
     box-shadow: 3px 3px 10px 0.5px #000;
-    transition: ease 5s;
+    transition: ease 3s;
 }
 .item_games:hover.item_games::after{
-    z-index: 1;
+    opacity: 1;
 }
 /* ========<<Category_catalog>>============= */
 .contents ul{
@@ -490,6 +547,10 @@ footer >img{
     border-radius: 24px;
 }
 /* ===========<<online_reservation>>============= */
+.content_online{
+    width: 72%;
+    margin: auto;
+}
 .where_store{
     display: flex;
     align-items: center;
@@ -533,11 +594,45 @@ iframe{
     width: 150px;
 }
 .others_detail input:last-child{
-    background-color: #4e5c1288;
+    background-color: #4c3cdf27;
     width: 100px;
-
+    padding-bottom: 4%;
+    color: #e0e5e9ef;
+    font-weight: 700;
 }
 .notice{
     margin: auto;
     padding-left: 40px;
+}
+/* ========<<about>>================ */
+.story_h2{
+    padding-top: 10%;
+    position: relative;
+}
+.story_h2::before{
+    position: absolute;
+    content: '';
+    top: 100%;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+.logo_story p{
+    padding:50px 40px 50px 250px ;
+}
+.picsum img{
+    margin: auto;
+    display: block;
+    width: 50%;
+    border-radius: 24px;
+}
+.about_background{
+    position: absolute;
+    left: 19%;
+    top: 5%;
+    height: 70%;
+    width: 65%;
+    display: block;
+    z-index: -2;
+    
 }

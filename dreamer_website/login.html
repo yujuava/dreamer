@@ -7,7 +7,7 @@
     <title>DREAMER_login</title>
     <link rel="icon" href="../pic/logo3.icon.png">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="front_page.css">
+    <link rel="stylesheet" href="inner_page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,24 +17,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@600&display=swap" rel="stylesheet">
 
 </head>
-<body>
-    <header>
+<body class="loginin">
+    <header >
         <h1>桌遊_桌夢人_DREAMER</h1>
-        <img src="../pic/movie圖.png" alt="movie_img">
-        <img src="../pic/topcolor.png" alt="">
+        <img class="nav_background" width="100%"  src="../pic/nav_backgroundcolor.jpg" alt="movie_img">
         <nav class="navigation_bar">
             <div class="logo">
-                <img width="130px" hight="67px" src="../pic/LOGO_gray.png" alt="logo">
+                <a href="/front_page.html"><img width="130px" hight="67px" src="../pic/LOGO_gray.png" alt="logo">
+                </a>
             </div>
             <ul class="main_manu">
-                <li><a class="navpage" href="http://127.0.0.1:5500/%E5%80%8B%E5%B0%88/%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88/forum.html">情報專區</a></li>
-                <li><a class="navpage" href="http://127.0.0.1:5500/%E5%80%8B%E5%B0%88/%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88/product_overview.html">進入商品</a></li>
-                <li><a class="navpage" href="http://127.0.0.1:5500/%E5%80%8B%E5%B0%88/%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88/online_reservation.html">線上預約</a></li>
-                <li><a class="navpage" href="http://127.0.0.1:5500/%E5%80%8B%E5%B0%88/%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88/about.html">關於我們</a></li>
+                <li><a class="navpage" href="../dreamer_website/forum.html">情報專區</a></li>
+                <li><a class="navpage" href="../dreamer_website/product_overview.html">進入商品</a></li>
+                <li><a class="navpage" href="../dreamer_website/online_reservation.html">線上預約</a></li>
+                <li><a class="navpage" href="../dreamer_website/about.html">關於我們</a></li>
             </ul>
             <div class="login">
-                <a href="http://127.0.0.1:5500/%E5%80%8B%E5%B0%88/%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88/login.html"><i class="fa-solid fa-user"></i></a>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <a href="../dreamer_website/login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="../dreamer_website/login.html"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </nav>
     </header>
@@ -44,5 +44,45 @@
     <P>密碼</P>
     <P>登入</P>
     <P>忘記密碼</P>
+    <footer>
+        <div class="footer_detail">
+            <div class="logo">
+                <img src="../pic/LOGO_gray.png" alt="">
+            </div>
+            <div class="subtitle">
+                <ul class="information">相關服務</ul>
+                <a ref="javascript:;">熱門排行</a>
+                <a href="javascript:;">線上預約</a>
+                <a href="javascript:;">購物須知</a>
+                <a href="javascript:;">門市探索</a>
+            </div>
+            <div class="people_center">
+                <ul class="information">情報專區</ul>
+                <a href="javascript:;">最新消息</a>
+                <a href="javascript:;">活動消息</a>
+                <a href="javascript:;">討論區</a>
+                <a href="javascript:;">二手交換</a>
+            </div>
+            <div class="contact_us">
+                <ul class="information">會員中心</ul>
+                <a href="javascript:;">我的收藏</a>
+                <a href="javascript:;">我的最愛</a>
+                <a href="javascript:;">購物車</a>
+                <a href="javascript:;">訂購紀錄</a>
+            </div>
+            <div class="online_contact">
+                <ul class="information">聯絡我們</ul>
+                <a href="javascript:;"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="javascript:;"><i class="fa-brands fa-instagram-square"></i></a>
+                <a href="javascript:;"><i class="fa-brands fa-twitter-square"></i></a>
+                <a href="javascript:;"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>使用條款｜隱私權保護政策｜ @ tibame</p>
+            <p>本平台僅供學習、展示之用。 若有侵權疑慮，您可以私訊緯育TibaMe，後續會由專人協助處理。</p>
+        </div>
+        <img src="../pic/footer_backgroundcolor2.jpg" alt="">
+    </footer>
 </body>
 </html>

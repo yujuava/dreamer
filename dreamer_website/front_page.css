@@ -2,8 +2,14 @@
 p{
     color: var(--color_text);
 }
+button{
+    transition: ease 0.5s;
+}
 button:hover{
     box-shadow: 0px 0px 7px 3px #c5c8ca;
+}
+i{
+    transition: ease 0.5s;
 }
 .encyclopedia i:hover{
     color: #2671BD;
@@ -20,7 +26,7 @@ button:hover{
 }
 body{
     background-color: rgb(0, 0, 0);
-    padding: 0.4% 0 0 0;
+    padding: 0% 0 0 0;
 }
 h1{
     display: none;
@@ -52,6 +58,9 @@ h2{
     padding-bottom: 100px;
 }
 /* =================<header>================= */
+.logo{
+    padding-top: 8px;
+}
 body{
     position: relative;
 }
@@ -90,6 +99,23 @@ header>video{
     margin-left: 4%;
     z-index: 11;
 }
+.navpage{
+    padding:  16px 0 16px 0;
+    /* background: linear-gradient(to bottom,rgb(0, 0, 0,0.6) 0%,#ffc00000 100%); */
+    position: relative;
+}
+.navpage::after{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 199;
+    /* background: linear-gradient(to bottom,rgba(25, 82, 156, 1) 0%,rgba(25, 82, 156, 0.6) 10%,#ffc00000 50%); */
+    transition: ease 0.5s;
+    opacity: 0;
+}
 .main_manu{
     display: flex;
     /* flex-direction: row; */
@@ -105,15 +131,21 @@ header>video{
     margin: 0 15px 0 15px;
     display: inline-block;
     text-decoration: none;
+    transition: ease 0.2s;
 }
 .main_manu a:hover{
-    color: #2671BD;
+    color: #9ec9f7;
+}
+.main_manu a:hover.navpage::after{
+    opacity: 1;
+    background: linear-gradient(to bottom,rgb(30, 94, 179,0.9) 0%,rgba(25, 82, 156, 0.7) 10%,#ffc00000 50%);
 }
 .login i{
     color: rgb(255, 255, 255,0.01);
     -webkit-text-stroke: 1.5px hsla(0,0%,100%,.8);
     font-size: 18px;
     margin: 10px;
+    transition: ease 0.2s;
 }
 .login i:hover{
     -webkit-text-stroke:1.5px #2671BD;
@@ -443,11 +475,11 @@ h3{
     width: 10rem;
     height: 10rem;
     transform: scale(1);
-    transition: ease 0.5s;
+    transition: ease 0.8s;
 }
 .rank_pic:hover{
-    box-shadow: 0 0 20px 10px #ffffff80;
-    transform: scale(1.03);
+    box-shadow: 0 0 30px 10px #ffffff80;
+    transform: scale(1.05);
 }   
 .p1{
     /* width: 15rem;
@@ -532,6 +564,17 @@ footer{
     position: relative;
     width: 100%;
 }
+.information{
+    font-size: 22px;
+    font-family: var(--font-family_text);
+    font-weight: 500;
+    color: #ffffffBF;
+    text-align: center;  
+    padding-bottom: 10px;
+}
+footer a{
+    font-size: 16px;
+}
 footer >img{
     position: absolute;
     bottom: 0;
@@ -550,11 +593,7 @@ footer >img{
     width: 130px;
     height: 67px;
 }
-.footer_detail h2{
-    font-family: var(--font-family_text);
-    font-weight: 500;
-}
-.footer_detail div{
+.logo,.subtitle,.people_center,.contact_us{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -570,5 +609,14 @@ footer >img{
     line-height: 20px;
     color: var(--color_text);
     text-align: center;
+    font-size: 12px;
+}
+.online_web{
+    display: flex;
+    flex-direction: row;
+}
+.online_contact i{
+    margin: 10px;
+    font-size: 25px;
 }
 /* =============<<forum>>================ */
