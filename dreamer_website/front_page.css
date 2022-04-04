@@ -3,10 +3,10 @@ p{
     color: var(--color_text);
 }
 button{
-    transition: ease 0.5s;
+    transition: ease 0.2s;
 }
 button:hover{
-    box-shadow: 0px 0px 7px 3px #c5c8ca;
+    box-shadow: 0px 0px 10px 3px #c5c8ca;
 }
 i{
     transition: ease 0.5s;
@@ -134,7 +134,7 @@ header>video{
     transition: ease 0.2s;
 }
 .main_manu a:hover{
-    color: #9ec9f7;
+    color: #ffffff;
 }
 .main_manu a:hover.navpage::after{
     opacity: 1;
@@ -144,7 +144,7 @@ header>video{
     color: rgb(255, 255, 255,0.01);
     -webkit-text-stroke: 1.5px hsla(0,0%,100%,.8);
     font-size: 18px;
-    margin: 10px;
+    margin:10px;
     transition: ease 0.2s;
 }
 .login i:hover{
@@ -190,6 +190,7 @@ button{
 }
 .focus_control button:first-child{
     filter: drop-shadow(10px 10px 6px rgba(0, 0, 0, 0.5));
+    z-index: 0;
     /* background-color: #583F0C; */
     border: 3px solid #605235;
     background:linear-gradient(to bottom, #090805, #583F0C);
@@ -333,7 +334,7 @@ h3{
     position: absolute;
     right: 10%;
     bottom: 8.5%;
-    z-index: 99;
+    z-index: 3;
 }
 /* =============<latest_information>============= */
 .latest_information h2{

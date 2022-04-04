@@ -13,7 +13,7 @@
     padding: 0.1% 0 0 0;
 }
 .loginin{
-    background-image: url(../pic/bcg3.jpg);
+    background-image: url(../pic/bcg7.jpg);
     padding: 0.1% 0 0 0;
 }
 .online_reservation,.product_overview{
@@ -35,7 +35,7 @@ h2{
     color: var(--color_text);
     font-size: 28px;
     text-align: center;
-    z-index: 50; 
+    z-index: 2; 
     margin-bottom:30px;   
 }
 h3{
@@ -144,7 +144,7 @@ header>video{
     transition: ease 0.2s;
 }
 .main_manu a:hover{
-    color: #9ec9f7;
+    color: #ffffff;
 }
 .main_manu a:hover.navpage::after{
     opacity: 1;
@@ -547,7 +547,23 @@ footer a{
     border-radius: 24px;
 }
 /* ===========<<online_reservation>>============= */
+.taiwan_map{
+    position: relative;
+}
+.online_reservation_title{
+    position: relative;
+    top: 100px;
+}
+.online_reservation_title::before{
+    position: absolute;
+    content: '';
+    top: 100%;
+    width: 53.5%;
+    height: 2px;
+    background-color: #fff;
+}
 .content_online{
+    padding-top: 5% ;
     width: 72%;
     margin: auto;
 }
@@ -605,7 +621,9 @@ iframe{
     padding-left: 40px;
 }
 /* ========<<about>>================ */
+
 .story_h2{
+    margin-top: 5%;
     padding-top: 10%;
     position: relative;
 }
@@ -613,14 +631,14 @@ iframe{
     position: absolute;
     content: '';
     top: 100%;
-    width: 100%;
+    width: 75%;
     height: 2px;
     background-color: #fff;
 }
 .logo_story p{
-    padding:50px 40px 50px 250px ;
+    padding:50px 170px 50px 170px ;
 }
-.picsum img{
+.picsum iframe{
     margin: auto;
     display: block;
     width: 50%;
@@ -628,11 +646,76 @@ iframe{
 }
 .about_background{
     position: absolute;
-    left: 19%;
+    left: 17%;
     top: 5%;
     height: 70%;
     width: 65%;
     display: block;
-    z-index: -2;
-    
+    z-index: -2; 
+}
+/* =================<<login>>==================== */
+.login_background{
+    position: absolute;
+    top: 4%;
+    left: 26%;
+    width: 50%;
+    z-index: -1;
+}
+.login_background:nth-child(2){
+    position: absolute;
+    top: 4%;
+    left: 26%;
+    width: 50%;
+    z-index: 1;
+}
+.login_page{
+    width: 100%;
+    padding-top: 14%; 
+    z-index: 99;
+}
+.login_text{
+    margin: auto;
+    /* width: %; */
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+}
+.login_text h2{
+    color: #10181F;
+}
+.login_text label{
+    color: #10181F;
+    font-weight: 700;
+}
+.login_text:first-child{
+    width: 35%;
+}
+.login_text button {
+    background-color: #3B5998;
+    color: #fff;
+    width: 30%;
+    margin: auto;
+}
+.login_text label{
+    padding: 3%;
+    margin: auto;
+}
+.login_text :nth-child(8){
+    width: 30%;
+    margin: auto;
+    color: #fff;
+    background-color: rgb(180, 17, 17,0.9);
+    margin-top: 20px;
+}
+.login_text label:last-child{
+    margin-top: 20px;
+    color: rgb(180, 17, 17);
+    text-decoration: 2px underline;
+}
+.login_text input{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 15px;
 }
