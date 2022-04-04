@@ -305,10 +305,28 @@ footer a{
 }
 
 /* ==============<<ad>>==================== */
+.coontentk{
+    width: 85%;
+}
 .ad{
     position: relative;
-    width: 100%;
+    margin: auto;
+    width: 80%;
     margin-bottom: 50px;
+    margin-top: 100px
+}
+.ad::before{
+    position: absolute;
+    content: "";
+    left: 90px;
+    width: 86%;
+    height: 100%;
+    box-shadow: 0px 0px 90px 50px inset #000000;
+    z-index: 2;
+}
+.ad img{
+    margin: auto;
+    display: block;
 }
 .comment{
     position: relative;
@@ -316,6 +334,18 @@ footer a{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+.forum_h2{
+    position: relative;
+}
+.forum_h2::after{
+    content: '';
+    position: absolute;
+    left: 46.5%;
+    top: 103%;
+    width:53.5%;
+    height: 3px;
+    background-color: #c5c8ca;
 }
 .artical{
     background-image: url(../pic/footercolor.png);
